@@ -46,8 +46,10 @@ export class VideoRecorder {
             this.onVideoData = onVideoData;
 
             // Request camera access
+             facingMode: "environment",
             this.stream = await navigator.mediaDevices.getUserMedia({ 
                 video: {
+                    facingMode: "environment",
                     width: { ideal: this.options.width },
                     height: { ideal: this.options.height }
                 }
